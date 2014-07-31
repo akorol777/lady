@@ -1,12 +1,20 @@
 $default-transition-duration: 0.3s
+$nav-bord-h: 12px
+$nav-h: 40px
+
+$main-c: #fc0
 a
 	text-decoration: none
+	&:hover
+		.ico
+			+opacity(0.6)	
 .wrap
 	width: 100%
 	min-width: 320px
 	height: 100%
+	background-color: #222 
 .container
 	margin: 0 auto
-	padding: 0 20px
+	padding: 0 20px 0 20px
 	width: 960px
 	+box 	
