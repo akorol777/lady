@@ -31,7 +31,11 @@
 						<a href="#" class="item">
 							<span class="link">Корзина</span>
 							0
-						</a>		
+						</a>
+						<ul class="header__mobile">
+							<li><a href="#"><i class="ico i-share"></i></a></li>
+							<li><a href="#"><i class="ico i-earth-big"></i></a></li>
+						</ul>				
 					</div>
 					<div class="header__right">
 						<div class="item">
@@ -50,13 +54,17 @@
 							<div class="roll">	
 								<a href="#" class="shop">магазины</a>
 							</div>	
-						</div>						
+						</div>
+						<ul class="header__mobile">
+							<li><a href="#"><i class="ico i-phone-big"></i></a></li>
+							<li><a href="#"><i class="ico i-user-big"></i></a></li>
+						</ul>							
 					</div>
 				</div>
-				<div class="header_bottom">
+				<div class="header__bottom">
 					<div class="form">
 						<input type="text">
-						<i class="ico i-search"></i>
+						<button class="btn-search"></button>
 					</div>
 				</div>
 				<a href="#" class="logo">lady sharm
@@ -66,19 +74,35 @@
 		</header>
 		<div class="about">
 			<nav class="nav">
-				<div class="nav-in container">
-					<ul class="navigation navigation-left">
-						<li><a href="#">О нас</a></li>
-						<li class="is-active"><a href="#">Коллекции</a></li>
-						<li><a href="#">Интернет-магазин</a></li>
-					</ul>
-					<ul class="navigation navigation-right">
-						<li><a href="#">Франшиза</a></li>
-						<li><a href="#">Новости</a></li>
-						<li><a href="#">События</a></li>
-						<li class="navigation_mini"><a href="#"><span></span></a></li>
-					</ul>				
-				</div>
+				<div class="nav-overflow">
+					<div class="nav-in container">
+						<ul class="navigation navigation-left">
+							<li class="navigation__item mobile"><a href="#" class="navigation__link">Корзина</a></li>							
+							<li class="navigation__item tablet-no"><a href="#" class="navigation__link">О нас</a></li>
+							<li class="is-active navigation__item mobile-no"><a href="#" class="navigation__link">Коллекции</a></li>
+							<li class="navigation__item mobile-no"><a href="#" class="navigation__link">Интернет-магазин</a></li>
+						</ul>
+						<ul class="navigation navigation-right">
+							<li class="navigation__item mobile"><a href="#" class="navigation__link">Меню</a></li>							
+							<li class="navigation__item tablet-no"><a href class="navigation__link">Франшиза</a></li>
+							<li class="navigation__item mobile-no"><a href="#" class="navigation__link" class="navigation__link">Новости</a></li>
+							<li class="navigation__item mobile-no"><a href="#" class="navigation__link">События</a></li>
+							<li class="navigation-mini">
+								<a href="#" class="navigation__point">
+									<span></span>
+								</a>
+								<ul class="navigation-hidden">
+									<li><a href="#">О нас</a></li>
+									<li><a href="#">Коллекции</a></li>
+									<li><a href="#">Интернет-магазин</a></li>
+									<li><a href="#">Франшиза</a></li>
+									<li><a href="#">Новости</a></li>
+									<li><a href="#">События</a></li>
+								</ul>							
+							</li>
+						</ul>				
+					</div>
+			</div>
 			</nav>
 		</div>	
 	</div>

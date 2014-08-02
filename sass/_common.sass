@@ -1,13 +1,12 @@
 $default-transition-duration: 0.3s
 $nav-bord-h: 12px
-$nav-h: 40px
+$nav-h: 39px
 
 $main-c: #fc0
 a
-	text-decoration: none
-	&:hover
-		.ico
-			+opacity(0.6)	
+	text-decoration: none	
+body,a
+	font-family: arial 		 			
 .wrap
 	width: 100%
 	min-width: 320px
@@ -16,5 +15,12 @@ a
 .container
 	margin: 0 auto
 	padding: 0 20px 0 20px
-	width: 960px
-	+box 	
+	max-width: 960px
+	+box 
+	// +r(w480)
+	// 	max-width: 480px
+	+r(w860)
+		max-width: 768px
+	+r(w700)
+		max-width: 480px	
+	

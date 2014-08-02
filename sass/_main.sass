@@ -22,6 +22,15 @@
 	left: 50%
 	margin-left: -90px 	
 	+hide-text
+	img
+		width: 100%
+	+r(w860)
+		width: 120px
+		top: 23px
+		margin-left: -60px 
+	+r(w700)
+		width: 130px
+		top: -10px	
 .form
 	background-color: rgba(254,254,254,.11)
 	border: 1px solid #5e605a
@@ -35,9 +44,20 @@
 		width: 100%  
 		background-color: transparent 
 		color: #c3c3c3 
-		&:focus+.ico
-			+opacity(0.7)	
-	.ico
+	.btn-search
+		+s(i-search)
+		display: inline-block	
 		position: absolute
 		top: 4px
 		right: 5px
+		+transition
+		&:hover
+			+opacity(0.7)	
+
+/*-----help-----*/
+.hover-opacity
+	+transition
+	&:hover
+		+opacity(0.7)	
+
+		
