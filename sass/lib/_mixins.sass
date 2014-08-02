@@ -19,6 +19,7 @@
 $min1920: 1920px
 $w1280: 1280px
 $w1270: 1270px
+$w1180: 1180px
 $w1024: 1024px
 $w900: 900px
 $w860: 860px
@@ -77,6 +78,9 @@ $w505: 505px
 			@content
 	@if $media == w1270
 		@media only screen and (max-width: $w1270)
+			@content
+	@if $media == w1180
+		@media only screen and (max-width: $w1180)
 			@content
 	@if $media == w1024
 		@media only screen and (max-width: $w1024)

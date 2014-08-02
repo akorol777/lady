@@ -5,6 +5,15 @@ $(document).ready(function() {
 		return false;
 	});
 
+	$('.nav-foot__link').click(function(){
+		$('.nav-foot__content').toggleClass('is-open');
+		return false;
+	});
+
+	$('.btn-plus').click(function(){
+		$('.nav-foot__content').toggleClass('is-open');
+		return false;
+	});
 
 
 

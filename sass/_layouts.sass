@@ -27,9 +27,9 @@
 			float: left
 			font-size: 12px
 			line-height: 19px
-			color: #c3c3c3
+			color: #fff
 			vertical-align: top
-			margin-right: 33px
+			margin-right: 20px
 			.link
 				border-bottom: 1px dotted 
 				vertical-align: top
@@ -67,7 +67,7 @@
 				width: 1px
 				display: inline-block
 				top: 2px
-				left: -16px
+				left: -11px
 				+background-image(linear-gradient(bottom, rgba(255,255,255,0) 0%, #fff 50.39%, rgba(255,255,255,.99) 50.9%, rgba(255,255,255,0) 100%))
 			&:last-child
 				&:before
@@ -76,12 +76,12 @@
 				display: none
 		.phone
 			font-size: 16px
-			color: #999
-			font-family: heliosextthinc
+			color: #fff
+			font-family: heliosextc
 			font-size: 16px 
 		.quest
 			font-size: 11px
-			color: #999
+			color: #fff
 			text-decoration: underline
 			&:hover
 				text-decoration: none	
@@ -125,7 +125,7 @@
 			display: none
 	.social
 		float: left
-		margin-right: 33px
+		margin-right: 20px
 		+r(w700)
 			display: none
 	.header__mobile
@@ -152,213 +152,75 @@
 .about
 	background-image:  image-url("bg.jpg")
 	min-height: 700px//KILL 
-	+cover 		
-/*-----nav-------------------------------------------*/	
-.nav
-	position: relative
-	.nav-bg
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		display: table
-		border-collapse: collapse
-		table-layout: fixed
-		+box
-		.center
-			background: transparent
-			//width: 920px
-			border-color: transparent  
-	.nav__block
-		display: table-cell	
-		background: #0FF
-		height: $nav-h+$nav-bord-h
-		z-index: -1
-		background-color: rgba(255, 255, 255, 0.7)
-		border-top: 12px solid #ffcc00
-		height: 45px
-		+box
-	.nav-overflow
-		// overflow: hidden
-		width: 100%
-	// .nav-infinity
-	// 	top: -$nav-bord-h
-	// 	background: inherit
-	// 	height: 100%
-	// 	width: 9999px
-	// 	border-top: $nav-bord-h solid $main-c
-	.nav-center
-		bottom: 0
-		height: $nav-h+$nav-bord-h
-		width: 23px 
-	.nav-in	
-		+clr
-	.navigation
-		background-color: rgba(255,255,255,0.7)
-		border-top: $nav-bord-h solid $main-c 
-		display: table 
-		border-collapse:collapse
-		height: $nav-h
-		line-height: $nav-h
+	+cover
+/*-----footer-----------------------------------------*/
+.footer
+	background-color: #313131 
+	.footer__top
+		height: 107px
+		background-image: image-url("bg-other.jpg") 
 		position: relative
-		+clr
-		.navigation__item
-			display: table-cell
-			text-align: center
-		.tablet-no
+		+r(w700)
+			height: 78px 	
+		.logo
+			top: 15px
 			+r(w860)
-				display: none	
-		.mobile-no
+				width: 163px
+				margin-left: -90px 
 			+r(w700)
-				display: none
-		.mobile
-			display: none
-			+r(w700)
-				display: table-cell					
-		.navigation__link
-			font-size: 14px
-			line-height: $nav-h
-			height: $nav-h 
-			color: #000
-			text-transform: uppercase
-			white-space: nowrap
-			display: inline-block 
-			position: relative
-			font-family: "helvetica-light"  
-			&:after
-				position: absolute
-				content: ""
-				width: 100%
-				height: 0
-				background-color: $main-c
-				left: 0
-				bottom: -20px 
-				+transition
-			&:hover
-				&:after
-					height: 4px	  	
-					bottom: -10px
-		.is-active
-			a
-				&:after
-					height: 4px	  	
-					bottom: -10px
+				width: 130px	
+				top: 8px 
+				margin-left: -72px 		
+	.footer__string
+		height: $nav-bord-h+$nav-h
+		margin-bottom: 47px
+		+clr
+	.footer__string-in
+		background: #fff 
+		border-top: $nav-bord-h solid $main-c
+		position: relative
+		height: 100%  
+		+box
 		&:after,&:before
 			position: absolute
-			content: ""	
-			display: inline-block							
-		.navigation-mini
-			text-align: right
-			position: relative
-			display: none
-			width: 20px
-			+box
-			+r(w860)
-				display: block
-			.navigation__point
-				margin-right: 15px
-				width: 20px
-				+transition
-				&:after
-					display: none
-				&:hover
-					+opacity(0.6)
-				span
-					display: inline-block
-					height: 3px
-					width: 100%
-					background-color: #626262
-					vertical-align: 3px
-					&:after,&:before
-						content: ""
-						position: absolute
-						left: 0
-						width: 100%
-						height: 3px
-						background-color: inherit
-					&:before
-						top: 11px
-					&:after
-						bottom: 10px	 
-	.navigation-left
+			content: ""
+			bottom: 0
+			height: $nav-h+$nav-bord-h
+			width: 30px
+			display: inline-block
+	.footer__string-l
 		float: left
-		width: 39.5%
-		+r(w860)
+		width: 42%
+		+r(w1180)
 			width: 41%
+		+r(w1024)
+			width: 40%
+		+r(w900)
+			width: 38%
 		+r(w700)
-			width: 35%
-		+r(w480)
-			width: 33%
-		+r(w400)
-			width: 29%								
-		&:after
-			@extend .nav-center
-			background-image: image-url("menu-left.png") 
-			right: -23px
-	.navigation-right
-		float: right
-		width: 41.4%
-		+r(w860)
-			width: 41%
-		+r(w700)
-			width: 32.5%
-		+r(w560)
-			width: 32%
+			width: 35%	
 		+r(w480)
 			width: 30%
-		+r(w400)
-			width: 26%			
-				 					
-		&:before	
-			@extend .nav-center
-			background-image: image-url("menu-right.png") 
-			left: -23px
-	.navigation-hidden
-		display: none
-		position: absolute
-		right: -20px
-		top: 36px
-		background: #FFF
-		text-align: center
-		min-width: 180px
-		&:before
-			position: absolute
-			content: ""
-			top: -6px
-			right: 25px 
-			width: 0
-			height: 0
-			border-style: solid
-			border-width: 0 6px 6px 6px
-			border-color: transparent transparent #fff transparent
-		li
-			border-bottom: 1px solid #d8d8d8
-		&:first-child
-			border-bottom: none 
-		a 		
-			width: 100%
-			display: inline-block
-			font-family: "helvetica-light"
-			font-size: 14px
-			line-height: $nav-h
-			color: #000 
-			text-transform: uppercase
-			position: relative
-			&:after
-				position: absolute
-				content: ""
-				width: 100%
-				height: 0
-				background-color: $main-c
-				left: 0
-				bottom: -20px 
-				+transition
-			&:hover
-				&:after
-					height: 2px	  	
-					bottom: 0px
-	.is-open
-		display: block		
-			
-		    		
-	    		
+		+r(w360)
+			width: 25%								
+		&:after
+			right: -30px
+			background-image: image-url("string-left.png")	
+	.footer__string-r
+		float: right
+		width: 43.3%
+		+r(w1180)	
+			width: 42.3% 
+		+r(w1024)	
+			width: 41.7% 
+		+r(w900)
+			width: 40%
+		+r(w700)
+			width: 37%
+		+r(w480)
+			width: 32.7%	
+		+r(w360)
+			width: 27.7%									
+		&:after
+			left: -30px
+			background-image: image-url("string-right.png")		
