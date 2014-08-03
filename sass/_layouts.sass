@@ -405,5 +405,141 @@
 			display: table-cell
 		a
 			@extend .hover-opacity				
-			
-
+/*-----vacncy-----------------------------------------*/
+.vacancy
+	background-image: image-url("vacancy-bg.png")
+	position: relative
+	padding-top: 65px
+	padding-bottom: 90px
+	&:after
+		position: absolute
+		content: ""
+		top: 3px
+		height: 2px
+		width: 100%
+		background-color: #fff 
+	.vacancy-in
+		+clr	
+	.col
+		height: 210px
+		width: 49%
+		border: 1px solid #fff
+		position: relative
+		font-family: heliosextc
+		color: #333
+		font-size: 14px
+		+box
+		+r(w860)
+			height: 230px
+		+r(w700)
+			width: 100%
+			height: auto
+			margin-bottom: 10px	
+		&:after
+			position: absolute
+			content: ""
+			display: inline-block
+			background-color: $main-c
+			width: 5px
+			height: 42px
+			top: 80px
+			right: -3px
+			+r(w700)
+				height: 5px
+				left: 217px 	 
+				width: 42px 
+	.col-left
+		float: left
+		padding: 35px 20px 20px 20px
+		+r(w860)
+			padding-top: 25px
+		+r(w700)
+			font-size: 12px
+			text-align: center
+			padding-top: 10px
+			padding-bottom: 10px
+			&:after
+				top: 99%
+		a
+			font-weight: bold
+			color: #333
+			+transition
+			&:hover
+				text-decoration: underline
+				color: #000 	
+	.col-right
+		float: right
+		padding: 15px 10px 0px
+		text-align: center
+		+r(w700)
+			padding-bottom: 20px
+		+clr
+		&:after
+			left: -3px
+			+r(w700)
+				top: -3px	
+				left: 217px
+	.vacancy-title
+		text-align: center
+		font-weight: normal
+		font-family: heliosextthinc
+		font-size: 30px
+		color: #FFF 
+		text-transform: uppercase
+		margin-bottom: 30px
+		+r(w700)
+			margin-bottom: 15px
+	.vacancy-title-small
+		text-align: center
+		font-weight: normal
+		font-size: 14px
+		margin-bottom: 15px
+		padding-right: 30px
+		padding-left: 30px
+		+r(w700)
+			font-size: 12px
+			margin-bottom: 7px
+	.vacancy__job
+		list-style-image: url(../img/list.png)
+		padding-left: 50px
+		text-align: left
+		+r(w860)
+			margin-bottom: 20px
+			padding-left: 25px
+		+r(w700)
+			margin-bottom: 12px
+			padding-left: 75px	
+		a
+			text-decoration: underline
+			font-family: heliosextc
+			font-size: 12px
+			line-height: 10px
+			color: #333
+			vertical-align: sub
+			+transition
+			&:hover
+				text-decoration: none
+				color: #000   
+	.btn-job
+		text-transform: uppercase
+		text-align: center
+		background-color: #000
+		color: #FFF
+		padding: 0 23px
+		border-top: 6px solid $main-c
+		height: 40px
+		font-size: 12px
+		line-height: 28px
+		float: right
+		margin-right: 10px 
+		+transition
+		&:hover
+			background-color: lighten(#000, 10%)
+		+r(w860)
+			margin-right: 0
+			width: 100%
+			float: none	 
+		+r(w700)
+			border-top: 3px solid $main-c
+			height: 30px
+			width: auto 

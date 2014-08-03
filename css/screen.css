@@ -224,6 +224,41 @@ body, a { font-family: arial; }
 .footer .footer__last-credit ul { display: table; border-collapse: collapse; width: 100%; }
 .footer .footer__last-credit li { display: table-cell; }
 
+/*-----vacncy----------------------------------------- */
+.vacancy { background-image: url('../img/vacancy-bg.png?1407075473'); position: relative; padding-top: 65px; padding-bottom: 90px; }
+.vacancy:after { position: absolute; content: ""; top: 3px; height: 2px; width: 100%; background-color: white; }
+.vacancy .vacancy-in { *zoom: 1; }
+.vacancy .vacancy-in:after { content: " "; display: table; clear: both; }
+.vacancy .col { height: 210px; width: 49%; border: 1px solid white; position: relative; font-family: heliosextc; color: #333333; font-size: 14px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+@media only screen and (max-width: 860px) { .vacancy .col { height: 230px; } }
+@media only screen and (max-width: 700px) { .vacancy .col { width: 100%; height: auto; margin-bottom: 10px; } }
+.vacancy .col:after { position: absolute; content: ""; display: inline-block; background-color: #ffcc00; width: 5px; height: 42px; top: 80px; right: -3px; }
+@media only screen and (max-width: 700px) { .vacancy .col:after { height: 5px; left: 217px; width: 42px; } }
+.vacancy .col-left { float: left; padding: 35px 20px 20px 20px; }
+@media only screen and (max-width: 860px) { .vacancy .col-left { padding-top: 25px; } }
+@media only screen and (max-width: 700px) { .vacancy .col-left { font-size: 12px; text-align: center; padding-top: 10px; padding-bottom: 10px; }
+  .vacancy .col-left:after { top: 99%; } }
+.vacancy .col-left a { font-weight: bold; color: #333333; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; }
+.vacancy .col-left a:hover { text-decoration: underline; color: black; }
+.vacancy .col-right { float: right; padding: 15px 10px 0px; text-align: center; *zoom: 1; }
+@media only screen and (max-width: 700px) { .vacancy .col-right { padding-bottom: 20px; } }
+.vacancy .col-right:after { content: " "; display: table; clear: both; }
+.vacancy .col-right:after { left: -3px; }
+@media only screen and (max-width: 700px) { .vacancy .col-right:after { top: -3px; left: 217px; } }
+.vacancy .vacancy-title { text-align: center; font-weight: normal; font-family: heliosextthinc; font-size: 30px; color: white; text-transform: uppercase; margin-bottom: 30px; }
+@media only screen and (max-width: 700px) { .vacancy .vacancy-title { margin-bottom: 15px; } }
+.vacancy .vacancy-title-small { text-align: center; font-weight: normal; font-size: 14px; margin-bottom: 15px; padding-right: 30px; padding-left: 30px; }
+@media only screen and (max-width: 700px) { .vacancy .vacancy-title-small { font-size: 12px; margin-bottom: 7px; } }
+.vacancy .vacancy__job { list-style-image: url(../img/list.png); padding-left: 50px; text-align: left; }
+@media only screen and (max-width: 860px) { .vacancy .vacancy__job { margin-bottom: 20px; padding-left: 25px; } }
+@media only screen and (max-width: 700px) { .vacancy .vacancy__job { margin-bottom: 12px; padding-left: 75px; } }
+.vacancy .vacancy__job a { text-decoration: underline; font-family: heliosextc; font-size: 12px; line-height: 10px; color: #333333; vertical-align: sub; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; }
+.vacancy .vacancy__job a:hover { text-decoration: none; color: black; }
+.vacancy .btn-job { text-transform: uppercase; text-align: center; background-color: black; color: white; padding: 0 23px; border-top: 6px solid #ffcc00; height: 40px; font-size: 12px; line-height: 28px; float: right; margin-right: 10px; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; }
+.vacancy .btn-job:hover { background-color: #1a1a1a; }
+@media only screen and (max-width: 860px) { .vacancy .btn-job { margin-right: 0; width: 100%; float: none; } }
+@media only screen and (max-width: 700px) { .vacancy .btn-job { border-top: 3px solid #ffcc00; height: 30px; width: auto; } }
+
 /*-----nav------------------------------------------- */
 .nav { position: relative; }
 .nav .nav-in { *zoom: 1; }
