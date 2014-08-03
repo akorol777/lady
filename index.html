@@ -6,10 +6,7 @@
 	<title>Lady</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<script src="js/lib/jquery.js"></script>
-	<script src="js/lib/cycle.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-  <script src="js/common.js"></script>
+	<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </head>
 <body>
 	<div class="wrap">
@@ -72,19 +69,16 @@
 		<!-- / .header -->
 		<section class="about">
 			<nav class="nav">
-				<div class="nav-roll">
+				<div class="line">
 					<ul>
-						<li class="help"></li>
-						<li class="withLogo">
+						<li class="line__help"></li>
+						<li class="logo-out">
 							<a href="#" class="logo">lady sharm
-								<img src="img/logo-new.png" alt="#">
 							</a>
 						</li>
-						<li class="help"></li>
+						<li class="line__help"></li>
 						</ul>			
 				</div>	
-	
-
 					<div class="nav-in container">
 						<ul class="navigation navigation-left">
 							<li class="navigation__item mobile"><a href="#" class="navigation__link">Корзина</a></li>							
@@ -116,113 +110,214 @@
 			</nav>
 		</section>
 		<!-- / .about -->
+		<div class="slider">
+			<div class="slider__meta">О нас</div>
+		</div>
+		<!-- /.slider -->		
 		<footer class="footer">
-			<div class="footer__top">
-				<a href="#" class="logo">lady sharm
-					<img src="img/logo.png" alt="#">
-				</a>
+			<div class="footer__top">	
+				<div class="footer__headline">
+				</div>
+				<div class="footer__string">
+					<div class="line">
+						<ul>
+							<li class="line__help"></li>
+							<li class="logo-out">
+								<a href="#" class="logo">lady sharm
+								</a>
+							</li>
+							<li class="line__help"></li>
+							</ul>			
+					</div>
+				</div>
+				<div class="container">
+					<ul class="nav-foot">
+						<li class="nav-foot__item">
+							<a href="#" class="nav-foot__link">О нас</a>
+							<button class="btn-plus"></button>
+							<ul class="nav-foot__content">
+								<li><a href="#">История</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+								<li><a href="#">История</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+								<li><a href="#">История</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+							</ul>		
+						</li>
+						<li class="nav-foot__item">
+							<a href="#" class="nav-foot__link">Коллекции</a>
+							<button class="btn-plus"></button>
+							<ul class="nav-foot__content">
+								<li><a href="#">История</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+								<li><a href="#">История</a></li>
+								<li><a href="#">История</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+							</ul>		
+						</li>
+						<li class="nav-foot__item">
+							<a href="#" class="nav-foot__link">Интернет</a>
+							<button class="btn-plus"></button>
+							<ul class="nav-foot__content">
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+								<li><a href="#">История</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+								<li><a href="#">История</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+							</ul>		
+						</li>
+						<li class="nav-foot__item">
+							<a href="#" class="nav-foot__link">Показы</a>
+							<button class="btn-plus"></button>
+							<ul class="nav-foot__content">
+								<li><a href="#">История</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+							</ul>		
+						</li>
+						<li class="nav-foot__item">
+							<a href="#" class="nav-foot__link">Новости</a>
+							<button class="btn-plus"></button>
+							<ul class="nav-foot__content">
+								<li><a href="#">История</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+								<li><a href="#">История</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+								<li><a href="#">История</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+							</ul>		
+						</li>
+						<li class="nav-foot__item">
+							<a href="#" class="nav-foot__link">Франчайзинг</a>
+							<button class="btn-plus"></button>
+							<ul class="nav-foot__content">
+								<li><a href="#">История</a></li>
+								<li><a href="#">Награды</a></li>
+								<li><a href="#">История</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+							</ul>		
+						</li>
+						<li class="nav-foot__item">
+							<a href="#" class="nav-foot__link">Партнерам</a>
+							<button class="btn-plus"></button>
+							<ul class="nav-foot__content">
+								<li><a href="#">История</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+								<li><a href="#">История</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+								<li><a href="#">Менеджмент</a></li>
+								<li><a href="#">Награды</a></li>
+							</ul>		
+						</li>																												
+					</ul>
+				</div>
+				<div class="footer__way container">
+					<a href="#" class="footer__way-link">Направления</a>
+					<ul class="footer__way-ico">
+						<li>
+							<a href="#">
+							 <img src="img/way1.png" alt="#">
+							</a> 
+						</li>
+						<li>	
+							<a href="#">
+								<img src="img/way2.png" alt="#">
+							</a>	
+						</li>	
+						<li>
+							<a href="#">
+								<img src="img/way1.png" alt="#">
+							</a>		
+						</li>
+						<li>
+							<a href="#">	
+								<img src="img/way3.png" alt="#">
+							</a>	
+						</li>
+					</ul>
+				</div>
+			</div>	
+			<div class="footer__middle">
+				<div class="nav-small-in">
+					<div class="container">
+						<ul class="nav-small container">
+							<li class="mobile">
+								<a href="#"><i class="ico i-quest"></i></a>
+							</li>
+							<li class="mobile">
+								<a href="#"><i class="ico i-share-foot"></i></a>
+							</li>
+							<li class="mobile">
+								<a href="#"><i class="ico i-mail"></i></a>
+							</li>
+							<li class="mobile-no"><a href="#">Помощь по сайту</a></li>
+							<li class="mobile-no"><a href="#">Карта сайта</a></li>
+							<li>
+								<div class="nav-small__form">
+									<input type="text">
+									<button></button>
+								</div>
+							</li>
+							<li class="mobile-no"><a href="#">Написать нам</a></li>
+							<li class="mobile-no"><a href="#">Заказать звонок</a></li>
+						</ul>		
+					</div>
+				</div>
+				<div class="container">
+					<div class="footer__info">
+						<a href="callto:888000949483" class="footer__info-phone">8 800 100-24-24</a>
+						<ul class="footer__info-quest">
+							<li><a href="#">задать вопрос</a></li>
+							<li><a href="#">оставить отзыв</a></li>
+						</ul>		
+					</div>
+				</div>
+				<h3 class="footer__title container">Не теряйте нас из виду:</h3>	
+				<ul class="footer__social container">
+					<li><a href="#"><i class="ico i-foot-vk"></i></a></li>
+					<li><a href="#"><i class="ico i-foot-twit"></i></a></li>
+					<li><a href="#"><i class="ico i-foot-fb"></i></a></li>
+					<li><a href="#"><i class="ico i-foot-yt"></i></a></li>
+					<li><a href="#"><i class="ico i-foot-two"></i></a></li>
+					<li><a href="#"><i class="ico i-foot-voice"></i></a></li>				
+				</ul>		
 			</div>
-			<div class="footer__string">
-				<div class="footer__string-in footer__string-l"></div>
-				<div class="footer__string-in footer__string-r"></div>
-			</div>
-			<div class="container">
-				<ul class="nav-foot">
-					<li class="nav-foot__item">
-						<a href="#" class="nav-foot__link">О нас</a>
-						<button class="btn-plus"></button>
-						<ul class="nav-foot__content">
-							<li><a href="#">История</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-							<li><a href="#">История</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-							<li><a href="#">История</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
+			<div class="footer__bottom">
+				<div class="footer__about">
+					<div class="container">
+						Модная женская одежда больших размеров марки «Ledi Шарм» создается талантливыми российскими дизайнерами с учетом особенностей фигуры полных женщин. Каждая коллекция – это десятки ярких образов для работы и отдыха, путешествий и праздничных торжеств – для любого случая жизни. Планируете вы просто обновить гардероб или хотите создать новый образ – стильная одежда для полных «Ledi Шарм» станет вашим верным помощником.
+					</div>	
+				</div>
+				<div class="footer__last container">
+					<div class="footer__last-credit">
+						<ul class="">
+							<li><a href="#"><i class="ico i-credit1"></i></a></li>
+							<li><a href="#"><i class="ico i-credit2"></i></a></li>
+							<li><a href="#"><i class="ico i-credit3"></i></a></li>
+							<li><a href="#"><i class="ico i-credit4"></i></a></li>
+							<li><a href="#"><i class="ico i-credit5"></i></a></li>
 						</ul>		
-					</li>
-					<li class="nav-foot__item">
-						<a href="#" class="nav-foot__link">Коллекции</a>
-						<button class="btn-plus"></button>
-						<ul class="nav-foot__content">
-							<li><a href="#">История</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-							<li><a href="#">История</a></li>
-							<li><a href="#">История</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-						</ul>		
-					</li>
-					<li class="nav-foot__item">
-						<a href="#" class="nav-foot__link">Интернет</a>
-						<button class="btn-plus"></button>
-						<ul class="nav-foot__content">
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-							<li><a href="#">История</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-							<li><a href="#">История</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-						</ul>		
-					</li>
-					<li class="nav-foot__item">
-						<a href="#" class="nav-foot__link">Показы</a>
-						<button class="btn-plus"></button>
-						<ul class="nav-foot__content">
-							<li><a href="#">История</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-						</ul>		
-					</li>
-					<li class="nav-foot__item">
-						<a href="#" class="nav-foot__link">Новости</a>
-						<button class="btn-plus"></button>
-						<ul class="nav-foot__content">
-							<li><a href="#">История</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-							<li><a href="#">История</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-							<li><a href="#">История</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-						</ul>		
-					</li>
-					<li class="nav-foot__item">
-						<a href="#" class="nav-foot__link">Франчайзинг</a>
-						<button class="btn-plus"></button>
-						<ul class="nav-foot__content">
-							<li><a href="#">История</a></li>
-							<li><a href="#">Награды</a></li>
-							<li><a href="#">История</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-						</ul>		
-					</li>
-					<li class="nav-foot__item">
-						<a href="#" class="nav-foot__link">Партнерам</a>
-						<button class="btn-plus"></button>
-						<ul class="nav-foot__content">
-							<li><a href="#">История</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-							<li><a href="#">История</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-							<li><a href="#">Менеджмент</a></li>
-							<li><a href="#">Награды</a></li>
-						</ul>		
-					</li>																												
-				</ul>
-			</div>			
+					</div>
+					<div class="footer__last-copy">&#174; &#8216;Ledi Sharm&#8216; Все права защищены. 2014</div>
+					<div class="footer__last-develop">developed by <a href="#">B&#38;T</a></div>
+				</div>
+			</div>	
 		</footer>	
 		<!-- / .footer -->
 	</div>

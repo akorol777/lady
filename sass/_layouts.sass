@@ -150,77 +150,258 @@
 			display: block
 /*-----about-----------------------------------------*/
 .about
-	background-image:  image-url("bg.jpg")
-	min-height: 700px//KILL 
-	+cover
+	position: relative
+	z-index: 1000
 /*-----footer-----------------------------------------*/
 .footer
-	background-color: #313131 
-	.footer__top
+	.footer__top 
+		background-color: #313131
+		+r(w700)
+			padding-bottom: 45px
+	.footer__middle
+		padding-top: 20px
+		padding-bottom: 20px
+		background-color: #2b2b2b
+		overflow: hidden
+		+r(w700)
+			padding-top: 45px
+			padding-bottom: 40px
+	.footer__bottom
+		padding-top: 17px
+		padding-bottom: 25px
+		background-image: image-url("bg-footer.jpg") 	
+	.footer__headline
 		height: 107px
 		background-image: image-url("bg-other.jpg") 
 		position: relative
 		+r(w700)
-			height: 78px 	
-		.logo
-			top: 15px
-			+r(w860)
-				width: 163px
-				margin-left: -90px 
-			+r(w700)
-				width: 130px	
-				top: 8px 
-				margin-left: -72px 		
+			height: 78px 	 		
 	.footer__string
 		height: $nav-bord-h+$nav-h
 		margin-bottom: 47px
-		+clr
-	.footer__string-in
-		background: #fff 
-		border-top: $nav-bord-h solid $main-c
 		position: relative
-		height: 100%  
+		+clr
+	.line
+		.line__help
+			background-image: image-url("bg-nav-foot.png")				
+		.logo	
+			background-image: image-url('logo-foot.png') 
+			margin-top: -92px  
+			+r(w860)
+				background-image: image-url('logo-foot.png')
+				height: 163px 
+			+r(w700)
+				background-image: image-url('logo-mob-foot.png')
+				height: 132px
+				margin-top: -70px
+	.footer__way
+		border-bottom: 1px solid #898989
+		border-top: 1px solid #898989 
+		padding-top: 10px
+		padding-bottom: 6px 
+		+clr
+		+r(w700)
+			border: 1px solid #898989
+			max-width: 440px
+			height: 70px 
+			padding: 2px
+		+r(w480)
+			width: 90%	
+	.footer__way-link
+		float: left
+		line-height: 32px
+		width: 26%
+		font-family: heliosextc
+		font-size: 12px
+		color: #ACACAC
+		text-align: right
+		position: relative
+		cursor: default
+		text-transform: uppercase
 		+box
-		&:after,&:before
+		&:after
 			position: absolute
 			content: ""
-			bottom: 0
-			height: $nav-h+$nav-bord-h
-			width: 30px
+			top: 7px
+			right: -20px
 			display: inline-block
-	.footer__string-l
-		float: left
-		width: 42%
-		+r(w1180)
-			width: 41%
-		+r(w1024)
-			width: 40%
-		+r(w900)
-			width: 38%
+			height: 20px
+			width: 1px
+			background-color: #acacac 
+		+r(w860)
+			width: 21% 
 		+r(w700)
-			width: 35%	
-		+r(w480)
-			width: 30%
-		+r(w360)
-			width: 25%								
-		&:after
-			right: -30px
-			background-image: image-url("string-left.png")	
-	.footer__string-r
+			width: 100%
+			cursor: pointer
+			text-align: center
+			border: 1px solid #464646 	
+			font-size: 20px
+			line-height: 62px
+			+transition
+			&:hover
+				color: #fff
+				&:after
+					@extend .hover-opacity 
+			&:after
+				top: 23px
+				right: 30px
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 10px 10px 0 10px
+				border-color: $main-c transparent transparent transparent
+				background-color: transparent 
+	.footer__way-ico
 		float: right
-		width: 43.3%
-		+r(w1180)	
-			width: 42.3% 
-		+r(w1024)	
-			width: 41.7% 
-		+r(w900)
-			width: 40%
+		width: 55%
+		display: table
+		border-collapse: collapse
+		margin-right: 135px
+		+box
+		+r(w860)
+			margin-right: 45px
+			width: 65%
 		+r(w700)
-			width: 37%
+			display: none	  
+		li
+			display: table-cell		
+		a
+			@extend .hover-opacity
+	.footer__info
+		display: none
+		text-align: center
+		padding-top: 38px
+		+r(w700)
+			display: block
+	.footer__info-phone
+		font-family: heliosextc
+		font-size: 28px
+		color: #999
+		margin-bottom: 5px
+		display: inline-block
+		+transition
+		&:hover
+			color: #FFF 
+	.footer__info-quest
+		display: table
+		border-collapse: collapse
+		width: 65%
+		margin: 0 auto 
 		+r(w480)
-			width: 32.7%	
-		+r(w360)
-			width: 27.7%									
-		&:after
-			left: -30px
-			background-image: image-url("string-right.png")		
+			width: 100%
+		li
+			display: table-cell
+			text-align: center
+		a
+			text-decoration: underline
+			font-family: arial
+			color: #999
+			+transition
+			&:hover
+				text-decoration: none
+				color: #FFF 
+	.footer__title
+		text-align: center
+		font-family: heliosextthinc
+		font-size: 12px
+		color: #ACACAC
+		font-weight: normal
+		margin-top: 22px 
+		margin-bottom: 15px 
+		+r(w700)
+			font-size: 22px
+			margin-top: 42px
+	.footer__social
+		display: table
+		border-collapse: collapse
+		width: 260px
+		+r(w700)
+			width: 100%
+			.i-foot-vk
+				+s(i-foot-vk-big)
+				&:hover
+					+s(i-foot-vk-big-h)
+			.i-foot-twit
+				+s(i-foot-twit-big)
+				&:hover
+					+s(i-foot-twit-big-h)								
+			.i-foot-fb
+				+s(i-foot-fb-big)
+				&:hover
+					+s(i-foot-fb-big-h)								
+			.i-foot-yt
+				+s(i-foot-yt-big)
+				&:hover
+					+s(i-foot-yt-big-h)								
+			.i-foot-two
+				+s(i-foot-two-big)
+				&:hover
+					+s(i-foot-two-big-h)								
+			.i-foot-voice
+				+s(i-foot-voice-big)
+				&:hover
+					+s(i-foot-voice-big-h)
+		li
+			display: table-cell
+			text-align: center
+		.ico	
+			+transition(0s)	
+	.footer__about
+		font-family: helioslightc
+		font-size: 10px
+		line-height: 13px
+		color: #666  
+		text-align: center
+		border-bottom: 1px solid #5C5C5C 
+		padding-bottom: 20px
+		margin-bottom: 10px
+		+r(w700)
+			display: none
+	.footer__last
+		color: #FFF 
+		+clr
+		+r(w700)
+			margin-top: 7px
+	.footer__last-copy
+		float: left
+		font-size: 12px
+		color: #ACACAC 
+		+hl
+		+r(w480)
+			font-size: 9px
+	.footer__last-develop
+		float: right
+		font-family: heliosextthinc
+		font-size: 11px
+		color: #ACACAC
+		+r(w480)
+			font-size: 9px
+		a
+			color: #ACACAC
+			text-decoration: underline
+			+transition
+			&:hover 
+				text-decoration: none
+				color: #FFF 
+	.footer__last-copy,	.footer__last-develop
+		margin-top: -17px
+		+r(w700)
+			margin-top: 15px		
+	.footer__last-credit
+		margin-left: 55% 					
+		width: 225px
+		text-align: center
+		+r(w860)
+			margin-left: 45%
+		+r(w700)
+			margin-left: 20% 	
+		ul
+			display: table
+			border-collapse: collapse
+			width: 100%
+		li
+			display: table-cell
+		a
+			@extend .hover-opacity				
+			
+

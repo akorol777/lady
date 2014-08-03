@@ -1,28 +1,6 @@
 /*-----nav-------------------------------------------*/ 
 .nav
-	position: relative
-	.nav-roll
-		position: absolute
-		left: 0
-		top: 0
-		width: 100%
-		ul
-			height: 52px
-			display: table
-			width: 100%
-			border-collapse: collapse		
-		li
-			display: table-cell
-		.help
-			background:
-				image: image-url("bg-nav.png")
-				repeat: repeat-x
-		.withLogo
-			width: 183px
-			a
-				display: inline-block
-				margin-top: -85px
-				+hide-text 	 
+	position: relative 	 
 	.nav-in 
 		+clr
 	.navigation
@@ -31,7 +9,10 @@
 		height: $nav-h
 		line-height: $nav-h
 		position: relative
+		width: 40%
 		+clr
+		+r(w700)
+			width: 23%
 		.navigation__item
 			display: table-cell
 			text-align: center
@@ -54,7 +35,7 @@
 			white-space: nowrap
 			display: inline-block 
 			position: relative
-			font-family: "helvetica-light"  
+			+hl 
 			&:after
 				position: absolute
 				content: ""
@@ -112,10 +93,8 @@
 						bottom: 10px   
 	.navigation-left
 		float: left
-		width: 39.5%
 	.navigation-right
 		float: right
-		width: 41.4%
 	.navigation-hidden
 		display: none
 		position: absolute
@@ -165,6 +144,7 @@
 .nav-foot
 	display: table 
 	width: 100% 
+	margin-bottom: 17px
 	+box
 	.nav-foot__item
 		display: table-cell
@@ -207,7 +187,6 @@
 			+transition
 			&:hover
 				border-bottom: 1px solid
-
 			&:after
 				display: none
 			&:before
@@ -244,7 +223,106 @@
 		+s(i-plus)
 		+r(w700)
 			display: inline-block
-			margin-top: 15px	
+			margin-top: 15px
+.nav-small
+	width: 100%
+	display: table
+	border-collapse: collapse
+	li
+		display: table-cell
+		text-align: center
+	a	
+		font-family: heliosextthinc
+		font-size: 12px
+		color: #ACACAC
+		+transition 
+		&:hover
+			color: #fff 
+	.nav-small__form
+		background-color: #373737
+		border-bottom: 1px solid #545454
+		width: 245px
+		display: inline-block
+		height: 25px
+		+clr
+		+r(w860)
+			width: 205px
+		+r(w700)
+			height: 45px
+			vertical-align: middle	
+			width: 100%  
+		input
+			background-color: transparent 
+			color: #fff
+			width: 80%
+			margin-left: 5px
+			margin-top: 4px
+			float: left
+			+r(w700)
+				font-size: 20px
+				width: 79%
+				margin-top: 10px
+			+r(w480)
+				width: 70%	
+		button
+			margin-top: 5px
+			margin-right: 5px
+			float: right
+			+s(i-search-foot)
+			@extend .hover-opacity
+			+r(w700)
+				margin-top: 8px
+				margin-right: 12px
+				+s(i-search-foot-big)
+	.mobile
+		display: none
+		+r(w700)
+			display: table-cell
+		.ico
+			margin-right: 20px		
+	.mobile-no
+		vertical-align: middle
+		a
+			vertical-align: 5px
+		+r(w700)
+			display: none
+	.ico:hover
+		@extend .hover-opacity	
+.nav-small-in
+	+r(w700)
+		background-color: #333
+		.container
+			padding-right: 0	 							
+			
+
+/*-----line------------------------------------*/
+.line
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	ul
+		height: 52px
+		display: table
+		width: 100%
+		border-collapse: collapse		
+	li
+		display: table-cell
+	.line__help
+		background:
+			image: image-url("bg-nav.png")
+			repeat: repeat-x
+		+r(w700)
+			background-image: image-url("bg-nav-mob.png")
+	.logo-out
+		width: 183px
+	.logo
+		margin-top: -85px
+		+hide-text	
+		+r(w860)
+			margin-top: -58px
+		+r(w700)
+			margin-top: -70px 	 		
 /*-----social--------------------------------------*/
 .social
 	+clr
@@ -267,7 +345,18 @@
 		+background-image(linear-gradient(bottom, rgba(255,255,255,0) 0%, #fff 50.39%, rgba(255,255,255,.99) 50.9%, rgba(255,255,255,0) 100%))
 /*-----logo-----------------------------------------*/
 .logo
+	display: block
+	display: table-caption
+	height: 163px
+	width: 184px 
+	background-image: image-url('logo-new.png')  
 	+hide-text
+	+r(w860)
+		background-image: image-url('logo-desc.png')
+		height: 122px 
+	+r(w700)
+		background-image: image-url('logo-mob.png')	
+		height: 132px		
 	// img
 	// 	width: 100%
 	// +r(w860)
@@ -305,7 +394,7 @@
 
 /*-----help----------------------------------------------------*/
 .hover-opacity
-	+transition
+	+transition(opacity 0.3s)
 	&:hover
 		+opacity(0.7) 
 
