@@ -529,3 +529,18 @@ body, a { font-family: arial; }
 
 .nav-overlay { position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; }
 .nav-overlay.is-active { z-index: 6000; }
+
+.lteie8 .wrap { -ms-overflow-y: scroll; overflow-y: scroll; -ms-overflow-x: hidden; overflow-x: hidden; }
+.lteie8 .header { height: 60px; }
+.lteie8 .container { width: 1152px; }
+.lteie8 .header-in { padding-bottom: 20px; }
+.lteie8 .title:after { background: #5e5d5a; }
+.lteie8 .forus__bg { background: #5e5d5a; }
+.lteie8 .nav .navigation .navigation__link { line-height: 70px; }
+.lteie8 .nav .navigation .navigation__link:after { bottom: 0; }
+.lteie8 .nav .navigation .navigation__link:hover { color: #111111; }
+.lteie8 .line { position: relative; }
+.lteie8 .slider .slider__container { background: none; }
+.lteie8 .slider .slider__cycle-item { z-index: -1; }
+.lteie8 .slider .slider__cycle-media img { width: 100%; }
+.lteie8 .slider .slider__topper-nav li.is-active { background: #373737; }
