@@ -5,10 +5,12 @@
 	<meta charset="utf-8">
 	<title>Lady</title>
 	<meta name="viewport" content="initial-scale=1"/>
+	<link rel="stylesheet" media="screen" href="css/jquery.fancybox.css" >
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </head>
 <body>
+	<div class="nav-overlay"></div>
 	<div class="wrap">
 		<header class="header">
 			<div class="header-in container">
@@ -21,14 +23,14 @@
 							<li><a href="#"><i class="ico i-twit"></i></a></li>
 							<li><a href="#"><i class="ico i-google"></i></a></li>
 						</ul>
-						<a href="#" class="item">
-							<span class="link">MySharm</span>
-							<i class="ico i-user"></i>
-						</a>
-						<a href="#" class="item">
-							<span class="link">Корзина</span>
-							0
-						</a>
+						<div class="city-out item">
+							<div class="roll">
+								<a href="#" class="city"><i class="ico i-earth"></i><span class="link">выберите город</span></a>
+							</div>
+							<div class="roll">	
+								<a href="#" class="shop">магазины</a>
+							</div>	
+						</div>
 						<ul class="header__mobile">
 							<li><a href="#"><i class="ico i-share"></i></a></li>
 							<li><a href="#"><i class="ico i-earth-big"></i></a></li>
@@ -44,14 +46,16 @@
 								<a href="#" class="quest">оставить вопрос</a>
 							</div>
 						</div>
-						<div class="item">
-							<div class="roll">
-								<a href="#" class="city"><i class="ico i-earth"></i><span class="link">выберите город</span></a>
-							</div>
-							<div class="roll">	
-								<a href="#" class="shop">магазины</a>
-							</div>	
-						</div>
+						<div class="user-out">
+							<a href="#" class="item">
+								<span class="link">Корзина</span>
+								0
+							</a>
+							<a href="#" class="item">
+								<span class="link">MySharm</span>
+								<i class="ico i-user"></i>
+							</a>
+						</div>	
 						<ul class="header__mobile">
 							<li><a href="#"><i class="ico i-phone-big"></i></a></li>
 							<li><a href="#"><i class="ico i-user-big"></i></a></li>
@@ -70,14 +74,7 @@
 		<section class="about">
 			<nav class="nav">
 				<div class="line">
-					<ul>
-						<li class="line__help"></li>
-						<li class="logo-out">
-							<a href="#" class="logo">lady sharm
-							</a>
-						</li>
-						<li class="line__help"></li>
-						</ul>			
+					<a href="#" class="logo">lady sharm</a>		
 				</div>	
 					<div class="nav-in container">
 						<ul class="navigation navigation-left">
@@ -153,8 +150,6 @@
 									</div>
 									<div class="slider__cycle-text">
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio sequi voluptate labore ipsum laborum distinctio atque esse consequuntur, quo, nam, sed harum itaque illo hic aliquam nulla. Voluptatem delectus, iste.</p>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta perferendis, vitae mollitia voluptate doloribus sunt cupiditate rerum eum quam sit ea dolorum fugiat pariatur, maxime aspernatur iusto illum illo minima!</p>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae aperiam reiciendis omnis, quibusdam in perspiciatis assumenda facilis provident, libero harum, mollitia rem ducimus quos hic distinctio necessitatibus porro impedit sed.</p>
 									</div>
 								</div>
 							</div>
@@ -169,6 +164,141 @@
 			</div>
 		</div>
 		<!-- /.slider -->
+		<div class="tour">
+			<div class="tour__media">
+				<!-- load FLASH and -->
+				<!-- DELETE THIS -->
+				<div class="tour__media-in"></div>
+				<div class="tour__media-text"></div>
+				<!-- END DELETE -->
+				<a href="#" class="tour__play">
+					<div class="tour__title">виртуальный<br> тур</div>
+					<div class="tour__meta">play</div>
+				</a>
+			</div>
+		</div>
+		<!-- /.tour -->
+		<div class="forus">
+			<div class="forus__bg"></div>
+			<div class="forus__in container">
+				<div class="js-slider forus__slider">
+				  <ul class="slides">
+				    <li>
+				      <div class="label">МЕНЕДЖМЕНТ</div>
+				      <div class="forus__row">
+				      	<div class="forus__media">
+				      		<img src="img/photo1.png" alt="" class="photo-descr">
+				      		<img src="img/photo1_tablet.png" alt="" class="photo-tablet">
+				      		<img src="img/photo1_mobile.png" alt="" class="photo-mobile">
+				      	</div>
+				      	<div class="forus__descr">
+				      		<p>Одежда «Ledi Шарм» - это воплощение стиля современной женщины в любой ситуации. Двадцать лет успешной работы фирмы на рынке позволили женщинам элегантного размера выглядеть изысканно и привлекательно. </p>
+				      	</div>
+				      </div>
+				    </li>
+				    <li>
+				    	<div class="label">2 МЕНЕДЖМЕНТ</div>
+				    	<div class="forus__row">
+				    		<div class="forus__media">
+				    			<img src="img/photo1.png" alt="" class="photo-descr">
+				    			<img src="img/photo1_tablet.png" alt="" class="photo-tablet">
+				    			<img src="img/photo1_mobile.png" alt="" class="photo-mobile">
+				    		</div>
+				    		<div class="forus__descr">
+				    			<p>Одежда «Ledi Шарм» - это воплощение стиля современной женщины в любой ситуации. Двадцать лет успешной работы фирмы на рынке позволили женщинам элегантного размера выглядеть изысканно и привлекательно. </p>
+				    			<p>ООО `Леди Шарм` было удостоено премий: «Сделано в Петербурге 2008, «Сделано в Петербурге 2009», «Сделано в Петербурге 2010, «Золотой Гермес  2007,  «Золотой Гермес 2008», звания «Лучшее Предприятие года 2009.</p>
+				    			<p>ООО `Леди Шарм` было удостоено премий: «Сделано в Петербурге 2008, «Сделано в Петербурге 2009», «Сделано в Петербурге 2010, «Золотой Гермес  2007,  «Золотой Гермес 2008», звания «Лучшее Предприятие года 2009.</p>
+				    		</div>
+				    	</div>
+				    </li>
+				    <li>
+				    	<div class="label">3 МЕНЕДЖМЕНТ</div>
+				    	<div class="forus__row">
+				    		<div class="forus__media">
+				    			<img src="img/photo1.png" alt="" class="photo-descr">
+				    			<img src="img/photo1_tablet.png" alt="" class="photo-tablet">
+				    			<img src="img/photo1_mobile.png" alt="" class="photo-mobile">
+				    		</div>
+				    		<div class="forus__descr">
+				    			<p>Одежда «Ledi Шарм» - это воплощение стиля современной женщины в любой ситуации. Двадцать лет успешной работы фирмы на рынке позволили женщинам элегантного размера выглядеть изысканно и привлекательно. </p>
+				    			<p>ООО `Леди Шарм` было удостоено премий: «Сделано в Петербурге 2008, «Сделано в Петербурге 2009», «Сделано в Петербурге 2010, «Золотой Гермес  2007,  «Золотой Гермес 2008», звания «Лучшее Предприятие года 2009.</p>
+				    		</div>
+				    	</div>
+				    </li>
+				    <li>
+				    	<div class="label">4 МЕНЕДЖМЕНТ</div>
+				    	<div class="forus__row">
+				    		<div class="forus__media">
+				    			<img src="img/photo1.png" alt="" class="photo-descr">
+				    			<img src="img/photo1_tablet.png" alt="" class="photo-tablet">
+				    			<img src="img/photo1_mobile.png" alt="" class="photo-mobile">
+				    		</div>
+				    		<div class="forus__descr">
+				    			<p>Одежда «Ledi Шарм» - это воплощение стиля современной женщины в любой ситуации. Двадцать лет успешной работы фирмы на рынке позволили женщинам элегантного размера выглядеть изысканно и привлекательно. </p>
+				    		</div>
+				    	</div>
+				    </li>
+				  </ul>
+				  <div class="forus__prev"></div>
+				  <div class="forus__next"></div>
+				</div>
+				<div class="js-slider-caro forus__caro">
+				  <ul class="slides">
+				    <li class="first">
+				      <div class="forus__title">РУКОВОДСТВО</div> 
+				    </li>
+				    <li class="second">
+				      <div class="forus__title">МИССИЯ</div>
+				    </li>
+				    <li class="third">
+				      <div class="forus__title">ПАРТНЕРАМ</div>
+				    </li>
+				    <li class="fourth">
+				      <div class="forus__title">НАШИ НАГРАДЫ</div>
+				    </li>
+				  </ul>
+				</div>
+			</div>
+		</div>
+		<!-- /.forus -->
+		<div class="gallery">
+			<div class="gallery__in container">
+				<div class="galler__content">
+					<div class="galler__top"><div class="galler__top-title">ПРОИЗВОДСТВО</div></div>
+					<p>"Леди Шарм" располагает собственным крупным производством в Гатчине (Санкт-Петербург). Над созданием одежды работает большой штат профессионалов: дизайнеры, стилист, конструкторы, раскройщики, технологи-контролеры качества и более ста швей. Для пошива одежды всех марок используются уникальные ткани из безопасного сырья, которые привозят из Италии, Франции и Германии.</p>
+				</div>
+				<div class="gallery__caro">
+					<div class="gallery__media">
+						<a class="fancybox" href="img/tour.jpg" data-fancybox-group="gallery">
+							<img src="img/gal1.jpg" alt="img">
+						</a>
+					</div>
+					<div class="gallery__media">
+						<a class="fancybox" href="img/tour.jpg" data-fancybox-group="gallery">
+							<img src="img/gal1.jpg" alt="img">
+						</a>
+					</div>
+					<div class="gallery__media">
+						<a class="fancybox" href="img/tour.jpg" data-fancybox-group="gallery">
+							<img src="img/gal1.jpg" alt="img">
+						</a>
+					</div>
+					<div class="gallery__media is-mobile-hidden">
+						<a class="fancybox" href="img/logo.png" data-fancybox-group="gallery">
+							<img src="img/gal1.jpg" alt="img">
+						</a>
+					</div>
+					<div class="gallery__media is-mobile-hidden">
+						<a class="fancybox" href="img/logo.png" data-fancybox-group="gallery">
+							<img src="img/gal1.jpg" alt="img">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.galler -->
+		
+
 		<div class="vacancy">
 			<div class="container">
 				<h3 class="vacancy-title">Вакансии:</h3>
@@ -189,21 +319,13 @@
 			</div>			
 		</div>
 		<!-- /.vacancy-->
-
 		<footer class="footer">
 			<div class="footer__top">	
 				<div class="footer__headline">
 				</div>
 				<div class="footer__string">
 					<div class="line">
-						<ul>
-							<li class="line__help"></li>
-							<li class="logo-out">
-								<a href="#" class="logo">lady sharm
-								</a>
-							</li>
-							<li class="line__help"></li>
-							</ul>			
+						<a href="#" class="logo">lady sharm</a>		
 					</div>
 				</div>
 				<div class="container">
