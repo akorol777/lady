@@ -8,6 +8,52 @@
 	<link rel="stylesheet" media="screen" href="css/jquery.fancybox.css" >
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+
+	<script src="http://api-maps.yandex.ru/1.1/index.xml?key=ANpUFEkBAAAAf7jmJwMAHGZHrcKNDsbEqEVjEUtCmufxQMwAAAAAAAAAAAAvVrubVT4btztbduoIgTLAeFILaQ==" type="text/javascript"></script><link rel="stylesheet" href="http://api-maps.yandex.ru/1.1.21/_YMaps.css?v=1.1.21-20"><script type="text/javascript" charset="utf-8" src="http://api-maps.yandex.ru/1.1.21/_YMaps.js?v=1.1.21-20"></script>
+	<script type="text/javascript" charset="utf-8" src="http://api-maps.yandex.ru/1.1.21/xml/data.xml?v=3.177.04.18.1"></script>
+	<script type="text/javascript">
+	    var map, geoResult;
+
+	    // Создание обработчика для события window.onLoad
+	    YMaps.jQuery(function () {
+	        // Создание экземпляра карты и его привязка к созданному контейнеру
+	        map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
+
+	        // Установка для карты ее центра и масштаба
+	        map.setCenter(new YMaps.GeoPoint(37.64, 55.76), 10);
+
+	        // Добавление элементов управления
+	        map.addControl(new YMaps.TypeControl());
+	    });
+
+	    // Функция для отображения результата геокодирования
+	    // Параметр value - адрес объекта для поиска
+	    function showAddress (value) {
+	        // Удаление предыдущего результата поиска
+	        map.removeOverlay(geoResult);
+
+	        // Запуск процесса геокодирования
+	        var geocoder = new YMaps.Geocoder(value, {results: 1, boundedBy: map.getBounds()});
+
+	        // Создание обработчика для успешного завершения геокодирования
+	        YMaps.Events.observe(geocoder, geocoder.Events.Load, function () {
+	            // Если объект был найден, то добавляем его на карту
+	            // и центрируем карту по области обзора найденного объекта
+	            if (this.length()) {
+	                geoResult = this.get(0);
+	                map.addOverlay(geoResult);
+	                map.setBounds(geoResult.getBounds());
+	            }else {
+	                alert("Ничего не найдено")
+	            }
+	        });
+
+	        // Процесс геокодирования завершен неудачно
+	        YMaps.Events.observe(geocoder, geocoder.Events.Fault, function (geocoder, error) {
+	            alert("Произошла ошибка: " + error);
+	        })
+	    }
+	</script>
 </head>
 <body>
 	<div class="nav-overlay"></div>
@@ -362,7 +408,7 @@
 		<div class="map">
 			<div class="map__topper">
 				<div class="map__title label">Наши магазины</div>
-				<div class="map__content-out">	
+				<div class="map__content-out container">	
 					<div class="map__content">
 						<div class="map__text col">
 							<div class="roll">
@@ -375,37 +421,84 @@
 								<div class="text">Чтобы узнать адреса и телефоны магазинов торговой марки Lady Sharm Classi</div>
 								<div class="text text-color">выберите город из списка справа</div>
 							</div>
-							<div class="roll">
+							<div class="roll roll_mod">
 								<div class="text">или введите адрес магазина в поиск</div>
 								<div class="form">
 									<input type="text">
 									<button class="btn-search"></button>
 								</div>
 							</div>	
-							<select class="mobile">
-								<option disabled>Выберите город из списка</option>
-  							<option>Москва</option>
-  							<option>Минск</option>
-  							<option>Минск</option>
-							</select>
+							<div class="mobile-wrap">
+								<select class="mobile">
+									<option>Выберите город из списка</option>
+	  							<option>Москва</option>
+	  							<option>Минск</option>
+	  							<option>Минск</option>
+								</select>
+							</div>
 						</div>
-						<div class="map__city col">
+						<div class="map__city col js-city">
 							<ul>
-								<li><a href="#">Новокузнецк</a></li>
-								<li><a href="#">Тула</a></li>
-								<li><a href="#">Санкт-Петербург</a></li>
-								<li><a href="#">Новокузнецк</a></li>
-								<li><a href="#">Тула</a></li>
-								<li><a href="#">Санкт-Петербург</a></li>
-								<li><a href="#">Новокузнецк</a></li>
-								<li><a href="#">Тула</a></li>
-								<li><a href="#">Санкт-Петербург</a></li>
-								<li><a href="#">Новокузнецк</a></li>
-								<li><a href="#">Тула</a></li>
-								<li><a href="#">Санкт-Петербург</a></li>
-								<li><a href="#">Новокузнецк</a></li>
-								<li><a href="#">Тула</a></li>
-								<li><a href="#">Санкт-Петербург</a></li>
+								<li>
+									<a href="javascript:showAddress('Санкт-Петербург')" class="js-city1">Санкт-Петербург</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Вышгородская 52, Вышгородская 49')" class="js-city2">Москва</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Сосновый Бор')" class="js-city3">Сосновый Бор</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Выборг')" class="js-city4">Выборг</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Гатчина')" class="js-city5">Гатчина</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Кингисепп')">Кингисепп</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Новокузнецк')">Новокузнецк</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Колпино')">Колпино</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Ярославль')">Ярославль</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Великий Новгород')">Великий Новгород</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Рязань')">Рязань</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Нижний Новгород')">Нижний Новгород</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Красноярск')">Красноярск</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Чебоксары')">Чебоксары</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Самара')">Самара</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Мурманск')">Мурманск</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Иваново')">Иваново</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Барнаул')">Барнаул</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Благовещенск')">Благовещенск</a>
+								</li>
+								<li>
+									<a href="javascript:showAddress('Курган')">Курган</a>
+								</li>
 							</ul>		
 							<div class="form">
 								<input type="text" placeholder="Введите адрес магазина">
@@ -413,24 +506,104 @@
 							</div>
 						</div>
 						<div class="map__chart col">
-							<img src="img/map.jpg" alt="#">
+							<form action="#" onsubmit="showAddress(this.address.value);return false;" class="map__form">
+							    <div id="YMapsID" class="YMaps YMaps-cursor-grab map__map"></div>
+							</form>
 						</div>
 						<div class="map__slider col col-slider">
-							<div class="map__info">
-								м.Сокол,<br> 
-								Волоколамское шоссе д. 3<br>
-								часы работы: пн-сб 10-21, вс 11-19<br>
-								тел: 8 (499) 158-09-92<br>
+							<div class="js-addr js-addr1">
+								<div class="js-mapslider">
+									<div class="slides">
+										<ul>
+											<li>
+												<div class="map__info">
+													м.Сокол,<br> 
+													Волоколамское шоссе д. 3<br>
+													часы работы: пн-сб 10-21, вс 11-19<br>
+													тел: 8 (499) 158-09-92<br>
+												</div>
+												<div class="map__info">
+													м.Сокол,<br> 
+													Волоколамское шоссе д. 3<br>
+													часы работы: пн-сб 10-21, вс 11-19<br>
+													тел: 8 (499) 158-09-92<br>
+												</div>
+											</li>
+										</ul>
+										<ul>
+											<li>
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas tempore blanditiis facilis numquam non aut quis maiores. Illum, quas nostrum vitae, tempore recusandae voluptatem sunt aspernatur architecto, ab numquam deleniti!
+											</li>
+											<li>
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas tempore blanditiis facilis numquam non aut quis maiores. Illum, quas nostrum vitae, tempore recusandae voluptatem sunt aspernatur architecto, ab numquam deleniti!
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
-							<div class="map__info">
-								м.Сокол,<br> 
-								Волоколамское шоссе д. 3<br>
-								часы работы: пн-сб 10-21, вс 11-19<br>
-								тел: 8 (499) 158-09-92<br>
+							<div class="js-addr js-addr2">
+								<div class="js-mapslider2">
+									<div class="slides">
+										<ul>
+											<li>
+												<div class="map__info">
+													22222 м.Сокол,<br> 
+													Волоколамское шоссе д. 3<br>
+													часы работы: пн-сб 10-21, вс 11-19<br>
+													тел: 8 (499) 158-09-92<br>
+												</div>
+												<div class="map__info">
+													м.Сокол,<br> 
+													Волоколамское шоссе д. 3<br>
+													часы работы: пн-сб 10-21, вс 11-19<br>
+													тел: 8 (499) 158-09-92<br>
+												</div>
+											</li>
+										</ul>
+										<ul>
+											<li>
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas tempore blanditiis facilis numquam non aut quis maiores. Illum, quas nostrum vitae, tempore recusandae voluptatem sunt aspernatur architecto, ab numquam deleniti!
+											</li>
+											<li>
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas tempore blanditiis facilis numquam non aut quis maiores. Illum, quas nostrum vitae, tempore recusandae voluptatem sunt aspernatur architecto, ab numquam deleniti!
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div> 
+							<div class="js-addr js-addr3">
+								<div class="js-mapslider3">
+									<div class="slides">
+										<ul>
+											<li>
+												<div class="map__info">
+													333 м.Сокол,<br> 
+													Волоколамское шоссе д. 3<br>
+													часы работы: пн-сб 10-21, вс 11-19<br>
+													тел: 8 (499) 158-09-92<br>
+												</div>
+												<div class="map__info">
+													м.Сокол,<br> 
+													Волоколамское шоссе д. 3<br>
+													часы работы: пн-сб 10-21, вс 11-19<br>
+													тел: 8 (499) 158-09-92<br>
+												</div>
+											</li>
+										</ul>
+										<ul>
+											<li>
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas tempore blanditiis facilis numquam non aut quis maiores. Illum, quas nostrum vitae, tempore recusandae voluptatem sunt aspernatur architecto, ab numquam deleniti!
+											</li>
+											<li>
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas tempore blanditiis facilis numquam non aut quis maiores. Illum, quas nostrum vitae, tempore recusandae voluptatem sunt aspernatur architecto, ab numquam deleniti!
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 							<div class="map__nav">
-								<a href="#" class="map__nav-left"></a>
-								<a href="#" class="map__nav-right"></a>
+								<a href="#" class="map__nav-left js-map-prev"></a>
+								<a href="#" class="map__nav-right js-map-next"></a>
 							</div>
 							<a href="#" class="map__link">смотреть списком на отдельной странице »</a>
 						</div>
@@ -439,6 +612,7 @@
 			</div>
 		</div>
 		<!--/.map-->
+		 	
 		<footer class="footer">
 			<div class="footer__top">	
 				<div class="footer__headline">
